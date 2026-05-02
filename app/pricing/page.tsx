@@ -28,6 +28,8 @@ export default function PricingPage() {
         { label: "4R (4x6 inch)", price: "₹15", unit: "per photo" },
         { label: "5R (5x7 inch)", price: "₹25", unit: "per photo" },
         { label: "Passport Size (12 pcs)", price: "₹60", unit: "per set" },
+        { label: "Passport Size Cut (8 pcs)", price: "₹40", unit: "per set" },
+    { label: "Post Card Size", price: "₹30", unit: "per photo" },
       ],
     },
   ];
