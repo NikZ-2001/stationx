@@ -36,6 +36,7 @@ export default function Hero() {
             <span className="bg-white border border-orange-200 text-orange-600 text-sm px-4 py-2 rounded-full shadow-sm">🖤 B&W Printout</span>
             <span className="bg-white border border-orange-200 text-orange-600 text-sm px-4 py-2 rounded-full shadow-sm">🎨 Color Printing</span>
             <span className="bg-white border border-orange-200 text-orange-600 text-sm px-4 py-2 rounded-full shadow-sm">📷 Photo Printing</span>
+            <span className="bg-white border border-orange-200 text-orange-600 text-sm px-4 py-2 rounded-full shadow-sm">🏷️ Sticker Printing</span>
             <span className="bg-white border border-gray-200 text-gray-400 text-sm px-4 py-2 rounded-full shadow-sm">🗂️ Lamination — Coming Soon</span>
             <span className="bg-white border border-gray-200 text-gray-400 text-sm px-4 py-2 rounded-full shadow-sm">✏️ Stationery — Coming Soon</span>
           </div>

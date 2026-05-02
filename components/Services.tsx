@@ -32,6 +32,16 @@ const services = [
     disabled: false,
   },
   {
+    icon: "🏷️",
+    title: "Sticker Printing",
+    subtitle: "Glossy Sticker Paper",
+    description: "Glossy sticker paper printing with neat cutting available for rectangle and square designs. Perfect for labels, branding, and personal use.",
+    badge: "New",
+    badgeColor: "bg-green-100 text-green-600",
+    waLink: WA_LINKS.sticker,
+    disabled: false,
+  },
+  {
     icon: "🗂️",
     title: "Lamination",
     subtitle: "Coming Soon",
