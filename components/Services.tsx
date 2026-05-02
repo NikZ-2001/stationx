@@ -35,7 +35,7 @@ const services = [
     icon: "🏷️",
     title: "Sticker Printing",
     subtitle: "Glossy Sticker Paper",
-    description: "Glossy sticker paper printing with neat cutting available for rectangle and square designs. Perfect for labels, branding, and personal use.",
+    description: "Glossy sticker paper printing with neat cutting for rectangle and square designs.",
     badge: "New",
     badgeColor: "bg-green-100 text-green-600",
     waLink: WA_LINKS.sticker,
@@ -65,16 +65,38 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 md:py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-14">
-          <span className="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-4 py-1 rounded-full mb-4 uppercase tracking-widest">
+        <div className="text-center mb-8 md:mb-14">
+          <span className="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-4 py-1 rounded-full mb-3 uppercase tracking-widest">
             What We Offer
           </span>
-          <h2 className="text-4xl font-bold text-gray-900 font-[var(--font-playfair)]">Our Services</h2>
-          <p className="text-gray-500 mt-3 text-lg">Everything you need, printed perfectly.</p>
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-[var(--font-playfair)]">Our Services</h2>
+          <p className="text-gray-500 mt-2 text-sm md:text-lg">Everything you need, printed perfectly.</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        {/* Mobile: horizontal scroll | Desktop: grid */}
+        <div className="flex gap-4 overflow-x-auto pb-4 md:hidden scrollbar-hide snap-x snap-mandatory">
+          {services.map((service) => (
+            <div key={service.title} className={`flex-none w-64 bg-white border rounded-2xl p-5 shadow-sm snap-start ${service.disabled ? "opacity-60" : ""}`}>
+              <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 ${service.badgeColor}`}>
+                {service.badge}
+              </span>
+              <p className="text-4xl mb-3">{service.icon}</p>
+              <h3 className="text-base font-bold text-gray-900 font-[var(--font-playfair)]">{service.title}</h3>
+              <p className="text-orange-500 text-xs font-medium mb-1">{service.subtitle}</p>
+              <p className="text-gray-500 text-xs leading-relaxed">{service.description}</p>
+              {!service.disabled && (
+                <a href={service.waLink} target="_blank" rel="noreferrer" className="inline-block mt-3 text-orange-500 text-xs font-semibold hover:underline">
+                  Order Now →
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: grid */}
+        <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <div key={service.title} className={`relative bg-white border rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 ${service.disabled ? "opacity-60" : "hover:-translate-y-1"}`}>
               <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4 ${service.badgeColor}`}>
@@ -92,8 +114,9 @@ export default function Services() {
             </div>
           ))}
         </div>
-        <div className="text-center mt-14">
-          <a href={WA_LINKS.general} target="_blank" rel="noreferrer" className="bg-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg shadow-orange-200">
+
+        <div className="text-center mt-8 md:mt-14">
+          <a href={WA_LINKS.general} target="_blank" rel="noreferrer" className="bg-orange-500 text-white px-8 py-3 md:py-4 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg shadow-orange-200 text-sm md:text-base">
             Order on WhatsApp
           </a>
         </div>

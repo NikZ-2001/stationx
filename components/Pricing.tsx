@@ -46,16 +46,42 @@ export default function Pricing() {
   ];
 
   return (
-    <section className="py-20 bg-orange-50">
+    <section className="py-10 md:py-20 bg-orange-50">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-14">
-          <span className="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-4 py-1 rounded-full mb-4 uppercase tracking-widest">
+        <div className="text-center mb-8 md:mb-14">
+          <span className="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-4 py-1 rounded-full mb-3 uppercase tracking-widest">
             Transparent Pricing
           </span>
-          <h2 className="text-4xl font-bold text-gray-900 font-[var(--font-playfair)]">Simple & Affordable</h2>
-          <p className="text-gray-500 mt-3 text-lg">No hidden charges. What you see is what you pay.</p>
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 font-[var(--font-playfair)]">Simple & Affordable</h2>
+          <p className="text-gray-500 mt-2 text-sm md:text-lg">No hidden charges. What you see is what you pay.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        {/* Mobile: horizontal scroll */}
+        <div className="flex gap-4 overflow-x-auto pb-4 md:hidden scrollbar-hide snap-x snap-mandatory">
+          {plans.map((plan) => (
+            <div key={plan.category} className="flex-none w-72 bg-white rounded-2xl p-6 shadow-sm snap-start">
+              <p className="text-3xl mb-2">{plan.icon}</p>
+              <h3 className="text-base font-bold mb-4 font-[var(--font-playfair)] text-gray-900">{plan.category}</h3>
+              <ul className="space-y-3">
+                {plan.prices.map((item) => (
+                  <li key={item.label} className="flex items-center justify-between border-b border-gray-100 pb-2">
+                    <span className="text-xs text-gray-500">{item.label}</span>
+                    <div className="text-right">
+                      <span className="text-base font-bold text-orange-500">{item.price}</span>
+                      <span className="text-xs ml-1 text-gray-400">{item.unit}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <a href={plan.waLink} target="_blank" rel="noreferrer" className="inline-block mt-5 w-full text-center bg-orange-500 text-white py-2.5 rounded-full font-semibold text-xs hover:bg-orange-600 transition">
+                Order Now
+              </a>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: grid */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {plans.map((plan) => (
             <div key={plan.category} className="rounded-2xl p-8 bg-white shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <p className="text-4xl mb-3">{plan.icon}</p>
@@ -77,7 +103,8 @@ export default function Pricing() {
             </div>
           ))}
         </div>
-        <p className="text-center text-gray-400 text-sm mt-10">
+
+        <p className="text-center text-gray-400 text-xs md:text-sm mt-8">
           * Prices may vary for special sizes or urgent orders. Contact us on WhatsApp for custom quotes.
         </p>
       </div>
