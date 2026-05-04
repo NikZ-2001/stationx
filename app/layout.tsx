@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     title: "StationX",
   },
   icons: {
-    icon: "/icon.svg",
-    apple: "/icon.svg",
-  },
+  icon: "/icon.png",
+  apple: "/icon.png",
+},
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

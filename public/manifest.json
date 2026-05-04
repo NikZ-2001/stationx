@@ -1,17 +1,22 @@
 {
   "name": "StationX - Premium Printing",
   "short_name": "StationX",
-  "description": "Premium printing services in Ambattur, Tamil Nadu",
+  "description": "Premium printing services in Ambattur, Chennai",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#f97316",
   "theme_color": "#f97316",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]
