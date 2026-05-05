@@ -54,7 +54,7 @@ export default function ContactPage() {
               <span className="text-2xl">📍</span>
               <div>
                 <p className="font-semibold text-gray-900">Location</p>
-                <p className="text-gray-500 text-sm">Ambattur, Tamil Nadu, India</p>
+                <p className="text-gray-500 text-sm">Ambattur, Chennai, India</p>
               </div>
             </div>
 

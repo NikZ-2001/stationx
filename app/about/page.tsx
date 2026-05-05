@@ -18,7 +18,7 @@ export default function AboutPage() {
         {/* Story Card */}
         <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12 mb-10">
           <p className="text-gray-600 text-lg leading-relaxed mb-6">
-            StationX is a premium printing service based in <strong>Ambattur, Tamil Nadu</strong>. We started with a simple mission — make high quality printing accessible, affordable, and hassle-free for everyone in our community.
+            StationX is a premium printing service based in <strong>Ambattur, Chennai</strong>. We started with a simple mission — make high quality printing accessible, affordable, and hassle-free for everyone in our community.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed mb-6">
             Whether you are a student printing your assignments, a professional printing your documents, or a business printing your marketing materials — StationX is here for you.

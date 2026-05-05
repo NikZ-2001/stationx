@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <h2 className="text-2xl font-bold text-orange-500 mb-3 font-[var(--font-playfair)]">🖨️ StationX</h2>
           <p className="text-sm text-gray-400 leading-relaxed mb-6">
-            Premium quality printing services for all your needs. Fast, affordable, and reliable.
+            Premium quality printing services for all your needs. Fast, affordable, secure and reliable.
           </p>
           {/* Social Links */}
           <div className="flex items-center gap-4">
@@ -48,7 +48,7 @@ export default function Footer() {
             <li>📞 <a href="tel:+918667344556" className="hover:text-orange-500 transition">+91 86673 44556</a></li>
             <li>💬 <a href="https://wa.me/918667344556" target="_blank" rel="noreferrer" className="hover:text-orange-500 transition">WhatsApp Us</a></li>
             <li>📧 <a href="mailto:hello@stationx.in" className="hover:text-orange-500 transition">hello@stationx.in</a></li>
-            <li>📍 Ambattur, Tamil Nadu</li>
+            <li>📍 Ambattur, Chennai</li>
           </ul>
         </div>
       </div>

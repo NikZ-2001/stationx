@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ClosedOverlay from "@/components/ClosedOverlay";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -23,7 +24,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "StationX - Premium Printing Services",
-  description: "Fast, affordable and premium quality printing services in Ambattur, Tamil Nadu",
+  description: "Secure, fast, affordable and premium quality printing services in Ambattur, Chennai",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -31,9 +32,9 @@ export const metadata: Metadata = {
     title: "StationX",
   },
   icons: {
-  icon: "/icon.png",
-  apple: "/icon.png",
-},
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
       <body className={`${playfair.variable} ${inter.variable} antialiased`}>
+        <ClosedOverlay />
         <Header />
         <main className="pt-20">
           {children}
