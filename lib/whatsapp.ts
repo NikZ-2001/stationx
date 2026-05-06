@@ -1,4 +1,4 @@
-export const WA_NUMBER = "918667344556";
+export const WA_NUMBER = "919150190729";
 
 export const WA_LINKS = {
   general: `https://wa.me/${WA_NUMBER}?text=Hey%20StationX!%20I%20want%20to%20place%20an%20order.`,

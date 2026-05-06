@@ -88,7 +88,7 @@ export default function ServicesPage() {
                 ))}
               </ul>
               {service.available && (
-                <a href="https://wa.me/918667344556?text=Hey%20StationX!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noreferrer" className="inline-block bg-orange-500 text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-orange-600 transition shadow-md shadow-orange-200">
+                <a href="https://wa.me/919150190729?text=Hey%20StationX!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noreferrer" className="inline-block bg-orange-500 text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-orange-600 transition shadow-md shadow-orange-200">
                   Order Now on WhatsApp
                 </a>
               )}

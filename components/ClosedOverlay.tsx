@@ -74,7 +74,7 @@ export default function ClosedOverlay() {
             💡 Beat the queue — order early morning or late evening when offline shops are closed!
           </p>
 
-          <a href="https://wa.me/918667344556?text=Hey%20StationX!%20I%20want%20to%20schedule%20an%20order%20for%20the%20next%20slot." target="_blank" rel="noreferrer" className="block w-full bg-orange-500 text-white py-3 rounded-full font-semibold text-sm hover:bg-orange-600 transition">
+          <a href="https://wa.me/919150190729?text=Hey%20StationX!%20I%20want%20to%20schedule%20an%20order%20for%20the%20next%20slot." target="_blank" rel="noreferrer" className="block w-full bg-orange-500 text-white py-3 rounded-full font-semibold text-sm hover:bg-orange-600 transition">
             📅 Schedule for Next Slot
           </a>
 

@@ -1,9 +1,12 @@
+import { WA_LINKS } from "@/lib/whatsapp";
+
 export default function PricingPage() {
   const plans = [
     {
       icon: "🖤",
       category: "B&W Printout",
       subtitle: "Xerox / Black & White",
+      waLink: WA_LINKS.bw,
       prices: [
         { label: "Single Side", price: "₹1", unit: "per page" },
         { label: "Double Side", price: "₹1.50", unit: "per page" },
@@ -14,6 +17,7 @@ export default function PricingPage() {
       icon: "🎨",
       category: "Color Printing",
       subtitle: "Vivid & Sharp",
+      waLink: WA_LINKS.color,
       prices: [
         { label: "Single Side", price: "₹10", unit: "per page" },
         { label: "Double Side", price: "₹18", unit: "per page" },
@@ -24,12 +28,24 @@ export default function PricingPage() {
       icon: "📷",
       category: "Photo Printing",
       subtitle: "Glossy & Matte",
+      waLink: WA_LINKS.photo,
       prices: [
         { label: "4R (4x6 inch)", price: "₹15", unit: "per photo" },
         { label: "5R (5x7 inch)", price: "₹25", unit: "per photo" },
-        { label: "Passport Size (12 pcs)", price: "₹60", unit: "per set" },
-        { label: "Passport Size Cut (8 pcs)", price: "₹40", unit: "per set" },
-    { label: "Post Card Size", price: "₹30", unit: "per photo" },
+        { label: "Passport Size 12 pcs", price: "₹60", unit: "per set" },
+        { label: "Passport Cut 8 pcs", price: "₹40", unit: "per set" },
+        { label: "Post Card Size", price: "₹30", unit: "per photo" },
+        { label: "A4 Photo Print", price: "₹80", unit: "per photo" },
+      ],
+    },
+    {
+      icon: "🏷️",
+      category: "Sticker Printing",
+      subtitle: "Glossy Sticker Paper",
+      waLink: WA_LINKS.sticker,
+      prices: [
+        { label: "Full Sheet A4", price: "₹20", unit: "per sheet" },
+        { label: "Cut — Rect / Square", price: "₹25", unit: "per sheet" },
       ],
     },
   ];
@@ -50,25 +66,29 @@ export default function PricingPage() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {plans.map((plan) => (
             <div key={plan.category} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <p className="text-4xl mb-3">{plan.icon}</p>
-              <h2 className="text-xl font-bold text-gray-900 font-[var(--font-playfair)]">{plan.category}</h2>
-              <p className="text-orange-500 text-sm font-medium mb-6">{plan.subtitle}</p>
-              <ul className="space-y-4 mb-8">
+              <div className="flex items-center gap-3 mb-6">
+                <p className="text-3xl">{plan.icon}</p>
+                <div>
+                  <h2 className="text-xl font-bold text-gray-900 font-[var(--font-playfair)]">{plan.category}</h2>
+                  <p className="text-orange-500 text-sm font-medium">{plan.subtitle}</p>
+                </div>
+              </div>
+              <ul className="space-y-3 mb-8">
                 {plan.prices.map((item) => (
-                  <li key={item.label} className="flex items-center justify-between border-b border-gray-100 pb-3">
-                    <span className="text-sm text-gray-500">{item.label}</span>
-                    <div className="text-right">
-                      <span className="text-xl font-bold text-orange-500">{item.price}</span>
-                      <span className="text-xs text-gray-400 ml-1">{item.unit}</span>
+                  <li key={item.label} className="flex items-center border-b border-gray-100 pb-3">
+                    <span className="text-sm text-gray-500 flex-1 leading-tight pr-4 whitespace-nowrap">{item.label}</span>
+                    <div className="flex-none w-28 text-right">
+                      <span className="text-lg font-bold text-orange-500">{item.price}</span>
+                      <span className="text-xs text-gray-400 block leading-tight">{item.unit}</span>
                     </div>
                   </li>
                 ))}
               </ul>
-              <a href="https://wa.me/918667344556?text=Hey%20StationX!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noreferrer" className="inline-block w-full text-center bg-orange-500 text-white py-3 rounded-full font-semibold text-sm hover:bg-orange-600 transition shadow-md shadow-orange-200">
-                Order Now
+              <a href={plan.waLink} target="_blank" rel="noreferrer" className="inline-block w-full text-center bg-orange-500 text-white py-3 rounded-full font-semibold text-sm hover:bg-orange-600 transition shadow-md shadow-orange-200">
+                Order Now on WhatsApp
               </a>
             </div>
           ))}
@@ -76,13 +96,13 @@ export default function PricingPage() {
 
         {/* Custom Quote */}
         <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
-          <p className="text-3xl mb-4">💬</p>
+          <i className="bi bi-chat-dots text-4xl text-gray-400 mb-4 block" />
           <h2 className="text-2xl font-bold text-gray-900 font-[var(--font-playfair)] mb-3">Need a Custom Quote?</h2>
           <p className="text-gray-500 text-sm leading-relaxed mb-6">
             Have a bulk order or special requirement? Send us a message on WhatsApp and we will give you the best price instantly.
           </p>
-          <a href="https://wa.me/918667344556?text=Hey%20StationX!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noreferrer" className="inline-block bg-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg shadow-orange-200">
-            📱 Get Custom Quote on WhatsApp
+          <a href={WA_LINKS.quote} target="_blank" rel="noreferrer" className="inline-block bg-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg shadow-orange-200">
+            <i className="bi bi-whatsapp mr-2" />Get Custom Quote on WhatsApp
           </a>
           <p className="text-gray-400 text-xs mt-6">
             * Prices may vary for special sizes or urgent orders.

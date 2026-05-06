@@ -29,8 +29,8 @@ export default function Pricing() {
       prices: [
         { label: "4R (4x6 inch)", price: "₹15", unit: "per photo" },
         { label: "5R (5x7 inch)", price: "₹25", unit: "per photo" },
-        { label: "Passport Size (12 pcs)", price: "₹60", unit: "per set" },
-        { label: "Passport Size Cut (8 pcs)", price: "₹40", unit: "per set" },
+        { label: "Passport Size 12 pcs", price: "₹60", unit: "per set" },
+        { label: "Passport Cut 8 pcs", price: "₹40", unit: "per set" },
         { label: "Post Card Size", price: "₹30", unit: "per photo" },
       ],
     },
@@ -39,12 +39,11 @@ export default function Pricing() {
       category: "Sticker Printing",
       waLink: WA_LINKS.sticker,
       prices: [
-        { label: "Full Sheet (A4)", price: "₹20", unit: "per sheet" },
-        { label: "Cut (Rectangle/Square)", price: "₹25", unit: "per sheet" },
+        { label: "Full Sheet A4", price: "₹20", unit: "per sheet" },
+        { label: "Cut — Rect / Square", price: "₹25", unit: "per sheet" },
       ],
     },
   ];
-
   return (
     <section className="py-10 md:py-20 bg-orange-50">
       <div className="max-w-6xl mx-auto px-4">
@@ -62,14 +61,11 @@ export default function Pricing() {
             <div key={plan.category} className="flex-none w-72 bg-white rounded-2xl p-6 shadow-sm snap-start">
               <p className="text-3xl mb-2">{plan.icon}</p>
               <h3 className="text-base font-bold mb-4 font-[var(--font-playfair)] text-gray-900">{plan.category}</h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {plan.prices.map((item) => (
-                  <li key={item.label} className="flex items-center justify-between border-b border-gray-100 pb-2">
-                    <span className="text-xs text-gray-500">{item.label}</span>
-                    <div className="text-right">
-                      <span className="text-base font-bold text-orange-500">{item.price}</span>
-                      <span className="text-xs ml-1 text-gray-400">{item.unit}</span>
-                    </div>
+                  <li key={item.label} className="flex items-center justify-between border-b border-gray-100 pb-2 gap-2">
+                    <span className="text-xs text-gray-500 whitespace-nowrap">{item.label}</span>
+                    <span className="text-xs font-bold text-orange-500 whitespace-nowrap">{item.price} <span className="text-gray-400 font-normal">{item.unit}</span></span>
                   </li>
                 ))}
               </ul>
@@ -84,16 +80,13 @@ export default function Pricing() {
         <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {plans.map((plan) => (
             <div key={plan.category} className="rounded-2xl p-8 bg-white shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <p className="text-4xl mb-3">{plan.icon}</p>
+              <p className="text-3xl mb-3">{plan.icon}</p>
               <h3 className="text-xl font-bold mb-6 font-[var(--font-playfair)] text-gray-900">{plan.category}</h3>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {plan.prices.map((item) => (
-                  <li key={item.label} className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{item.label}</span>
-                    <div className="text-right">
-                      <span className="text-xl font-bold text-orange-500">{item.price}</span>
-                      <span className="text-xs ml-1 text-gray-400">{item.unit}</span>
-                    </div>
+                  <li key={item.label} className="flex items-center justify-between border-b border-gray-100 pb-3 gap-2">
+                    <span className="text-sm text-gray-500 whitespace-nowrap">{item.label}</span>
+                    <span className="text-sm font-bold text-orange-500 whitespace-nowrap">{item.price} <span className="text-xs text-gray-400 font-normal">{item.unit}</span></span>
                   </li>
                 ))}
               </ul>

@@ -27,21 +27,21 @@ const services = [
     waLink: WA_LINKS.color,
     disabled: false,
     formats: ["PDF", "Word (.doc/.docx)", "JPG", "PNG", "PowerPoint"],
-    paperTypes: ["A4 (Standard)", "A3", "Matte"],
+    paperTypes: ["A4 (Standard)", "A3", "Glossy", "Matte"],
     sizes: [],
   },
   {
     icon: "📷",
     title: "Photo Printing",
-    subtitle: "Glossy",
+    subtitle: "Glossy & Matte",
     description: "Beautiful photo prints in all standard sizes. Perfect for memories, gifts, portfolios, and passport photos. Sharp, vibrant, and long-lasting.",
     badge: "Premium",
     badgeColor: "bg-purple-100 text-purple-600",
     waLink: WA_LINKS.photo,
     disabled: false,
     formats: ["JPG", "PNG", "HEIC", "PDF"],
-    paperTypes: ["Glossy"],
-    sizes: ["Passport Size (12 pcs)", "Passport Size Cut (8 pcs)", "4R — 4x6 inch",  "Post Card Size", "A4 Photo Print"],
+    paperTypes: ["Glossy", "Matte", "Semi-Gloss"],
+    sizes: ["Passport Size (12 pcs)", "Passport Size Cut (8 pcs)", "4R — 4x6 inch", "5R — 5x7 inch", "Post Card Size", "A4 Photo Print"],
   },
   {
     icon: "🏷️",
@@ -149,12 +149,8 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Modal */}
       {selectedService && (
-        <ServiceModal
-          service={selectedService}
-          onClose={() => setSelectedService(null)}
-        />
+        <ServiceModal service={selectedService} onClose={() => setSelectedService(null)} />
       )}
     </section>
   );
