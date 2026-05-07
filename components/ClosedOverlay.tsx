@@ -17,21 +17,26 @@ function getServiceStatus() {
     (timeInMinutes >= eveningStart && timeInMinutes < eveningEnd);
 
   let nextSlot = "";
+  let nextSlotTime = "";
   if (!isOpen) {
     if (timeInMinutes < morningStart) {
       nextSlot = "5:00 AM today";
+      nextSlotTime = "5:00 AM";
     } else if (timeInMinutes >= morningEnd && timeInMinutes < eveningStart) {
       nextSlot = "6:00 PM today";
+      nextSlotTime = "6:00 PM";
     } else {
       nextSlot = "5:00 AM tomorrow";
+      nextSlotTime = "5:00 AM";
     }
   }
 
-  return { isOpen, nextSlot };
+  return { isOpen, nextSlot, nextSlotTime };
 }
 
 export default function ClosedOverlay() {
-  const [status, setStatus] = useState({ isOpen: true, nextSlot: "" });
+  const [status, setStatus] = useState({ isOpen: true, nextSlot: "", nextSlotTime: "" });
+  const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
     setStatus(getServiceStatus());
@@ -39,16 +44,22 @@ export default function ClosedOverlay() {
     return () => clearInterval(interval);
   }, []);
 
-  if (status.isOpen) return null;
+  useEffect(() => {
+    const handleDismiss = () => setDismissed(true);
+    window.addEventListener("dismissOverlay", handleDismiss);
+    return () => window.removeEventListener("dismissOverlay", handleDismiss);
+  }, []);
+
+  if (status.isOpen || dismissed) return null;
+
+  const scheduleMessage = `Hey StationX! I would like to schedule a print order for the next available slot at ${status.nextSlotTime}. Please confirm when you are open.`;
+  const scheduleLink = `https://wa.me/919150190729?text=${encodeURIComponent(scheduleMessage)}`;
 
   return (
-    <div className="fixed inset-0 z-40 pointer-events-none">
-      {/* Dim overlay */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-auto" />
-
-      {/* Center card */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-auto">
-        <div className="bg-white rounded-3xl shadow-2xl p-8 mx-6 max-w-sm w-full text-center">
+    <div className="fixed inset-0 z-40">
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div className="absolute inset-0 flex items-center justify-center px-4 pointer-events-none">
+        <div className="bg-white rounded-3xl shadow-2xl p-8 max-w-sm w-full text-center pointer-events-auto">
           <p className="text-5xl mb-4">🕐</p>
           <h2 className="text-2xl font-bold text-gray-900 font-[var(--font-playfair)] mb-2">
             Currently Closed
@@ -56,8 +67,6 @@ export default function ClosedOverlay() {
           <p className="text-gray-500 text-sm mb-6 leading-relaxed">
             We are not accepting orders right now. We will be back at <strong className="text-orange-500">{status.nextSlot}</strong>.
           </p>
-
-          {/* Working hours */}
           <div className="bg-orange-50 rounded-2xl p-4 mb-6 text-left">
             <p className="text-xs font-semibold text-gray-700 mb-3 uppercase tracking-widest">Working Hours</p>
             <div className="flex items-center justify-between mb-2">
@@ -69,17 +78,14 @@ export default function ClosedOverlay() {
               <span className="text-sm font-semibold text-gray-900">6:00 PM – 12:00 AM</span>
             </div>
           </div>
-
-          <p className="text-xs text-gray-400 mb-4">
+          <p className="text-xs text-gray-400 mb-6">
             💡 Beat the queue — order early morning or late evening when offline shops are closed!
           </p>
-
-          <a href="https://wa.me/919150190729?text=Hey%20StationX!%20I%20want%20to%20schedule%20an%20order%20for%20the%20next%20slot." target="_blank" rel="noreferrer" className="block w-full bg-orange-500 text-white py-3 rounded-full font-semibold text-sm hover:bg-orange-600 transition">
+          <a href={scheduleLink} target="_blank" rel="noreferrer" className="block w-full bg-orange-500 text-white py-3 rounded-full font-semibold text-sm hover:bg-orange-600 transition mb-3">
             📅 Schedule for Next Slot
           </a>
-
-          <button onClick={() => document.querySelector(".closed-overlay")?.classList.add("hidden")} className="mt-3 text-xs text-gray-400 hover:text-gray-600 transition">
-            Browse anyway →
+          <button type="button" onClick={() => setDismissed(true)} className="block w-full bg-gray-100 text-gray-600 py-3 rounded-full font-semibold text-sm hover:bg-gray-200 transition">
+            Browse Anyway →
           </button>
         </div>
       </div>
