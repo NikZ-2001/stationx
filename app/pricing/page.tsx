@@ -1,5 +1,17 @@
 import { WA_LINKS } from "@/lib/whatsapp";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pricing — StationX Printing Service Ambattur Chennai",
+  description: "Affordable printing prices in Ambattur, Chennai. B&W printout from ₹1, color printing from ₹8, photo printing from ₹15. No hidden charges.",
+  openGraph: {
+    title: "Pricing — StationX Ambattur Chennai",
+    description: "B&W printout from ₹1, color printing from ₹8, photo prints from ₹15. Affordable and transparent pricing in Ambattur Chennai.",
+    url: "https://stationx.vercel.app/pricing",
+  },
+};
+
 export default function PricingPage() {
   const plans = [
     {

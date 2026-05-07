@@ -1,3 +1,15 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services — StationX Printing Service Ambattur Chennai",
+  description: "StationX offers B&W printout, color printing, photo printing and sticker printing in Ambattur, Chennai. Home delivery available across Thirumullaivoyal, Pudur, Kallikuppam and nearby areas.",
+  openGraph: {
+    title: "Our Services — StationX Ambattur Chennai",
+    description: "B&W printout, color printing, photo printing, sticker printing with home delivery in Ambattur Chennai.",
+    url: "https://stationx.vercel.app/services",
+  },
+};
+
 export default function ServicesPage() {
   const services = [
     {

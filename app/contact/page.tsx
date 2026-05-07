@@ -1,3 +1,16 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact — StationX Printing Service Ambattur Chennai",
+  description: "Contact StationX for printing services in Ambattur, Chennai. WhatsApp: +91 91501 90729. Home delivery available. Open 5AM-11AM and 6PM-12AM.",
+  openGraph: {
+    title: "Contact StationX — Ambattur Chennai",
+    description: "WhatsApp us at +91 91501 90729 for printing services in Ambattur Chennai. Open early morning and late evening.",
+    url: "https://stationx.vercel.app/contact",
+  },
+};
+
+
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-100">

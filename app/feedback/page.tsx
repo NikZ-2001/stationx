@@ -9,6 +9,11 @@ interface FeedbackEntry {
   device: string;
 }
 
+export const metadata = {
+  title: "Feedback — StationX Printing Service Ambattur Chennai",
+  description: "Share your feedback about StationX printing service in Ambattur, Chennai. Help us serve you better.",
+};
+
 export default function FeedbackPage() {
   const [name, setName] = useState("");
   const [rating, setRating] = useState(0);
