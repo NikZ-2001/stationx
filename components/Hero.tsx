@@ -38,14 +38,15 @@ export default function Hero() {
           </p>
 
           {/* Services Pills */}
-          <div className="flex flex-wrap gap-3 mb-8 animate-fade-up delay-300">
-            <span className="bg-white border border-orange-200 text-gray-600 text-sm px-4 py-2 rounded-full shadow-sm">🖤 B&W Printout</span>
-            <span className="bg-white border border-orange-200 text-gray-600 text-sm px-4 py-2 rounded-full shadow-sm">🎨 Color Printing</span>
-            <span className="bg-white border border-orange-200 text-gray-600 text-sm px-4 py-2 rounded-full shadow-sm">📷 Photo Printing</span>
-            <span className="bg-white border border-orange-200 text-gray-600 text-sm px-4 py-2 rounded-full shadow-sm">🏷️ Sticker Printing</span>
-            <span className="bg-white border border-gray-200 text-gray-400 text-sm px-4 py-2 rounded-full shadow-sm">🗂️ Lamination — Coming Soon</span>
-            <span className="bg-white border border-gray-200 text-gray-400 text-sm px-4 py-2 rounded-full shadow-sm">✏️ Stationery — Coming Soon</span>
-          </div>
+<div className="flex flex-wrap gap-3 mb-8 animate-fade-up delay-300">
+  <span className="bg-white border border-orange-200 text-gray-600 text-sm px-4 py-2 rounded-full shadow-sm">🖤 B&W Printing</span>
+  <span className="bg-white border border-orange-200 text-gray-600 text-sm px-4 py-2 rounded-full shadow-sm">🎨 Color Printing</span>
+  <span className="bg-white border border-orange-200 text-gray-600 text-sm px-4 py-2 rounded-full shadow-sm">📷 Photo Printing</span>
+  <span className="bg-white border border-orange-200 text-gray-600 text-sm px-4 py-2 rounded-full shadow-sm">🏷️ Sticker Printing</span>
+  <span className="bg-white border border-gray-200 text-gray-400 text-sm px-4 py-2 rounded-full shadow-sm">🗂️ Lamination — Soon</span>
+  <span className="bg-white border border-gray-200 text-gray-400 text-sm px-4 py-2 rounded-full shadow-sm">🔗 Spiral Binding — Soon</span>
+  <span className="bg-white border border-gray-200 text-gray-400 text-sm px-4 py-2 rounded-full shadow-sm">✏️ Stationery — Soon</span>
+</div>
 
           {/* Two CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up delay-400">
