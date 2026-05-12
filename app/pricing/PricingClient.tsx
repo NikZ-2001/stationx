@@ -6,31 +6,34 @@ const categories = [
   {
     icon: "🖨️",
     title: "Document Printing",
+    orderLink: WA_LINKS.document,
     items: [
-      { label: "B&W Print – 70 GSM", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹2", individualUnit: "per page", bulk: "₹1.50", bulkUnit: "per page (50+)", waLink: WA_LINKS.bw },
-      { label: "B&W Print – 80 GSM Crisp", tag: "Most Popular", tagColor: "bg-orange-100 text-orange-600", individual: "₹3", individualUnit: "per page", bulk: "₹2.50", bulkUnit: "per page (50+)", waLink: WA_LINKS.bw },
-      { label: "Color Print – 70 GSM", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹10", individualUnit: "per page", bulk: "₹8", bulkUnit: "per page (25+)", waLink: WA_LINKS.color },
-      { label: "Color Print – 80 GSM Crisp", tag: "Crisp", tagColor: "bg-purple-100 text-purple-600", individual: "₹12", individualUnit: "per page", bulk: "₹10", bulkUnit: "per page (25+)", waLink: WA_LINKS.color },
+      { label: "B&W Print – 70 GSM", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹2", individualUnit: "per page", bulk: "₹1.50", bulkUnit: "per page (50+)" },
+      { label: "B&W Print – 80 GSM Crisp", tag: "Most Popular", tagColor: "bg-orange-100 text-orange-600", individual: "₹3", individualUnit: "per page", bulk: "₹2.50", bulkUnit: "per page (50+)" },
+      { label: "Color Print – 70 GSM", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹10", individualUnit: "per page", bulk: "₹8", bulkUnit: "per page (25+)" },
+      { label: "Color Print – 80 GSM Crisp", tag: "Crisp", tagColor: "bg-purple-100 text-purple-600", individual: "₹12", individualUnit: "per page", bulk: "₹10", bulkUnit: "per page (25+)" },
     ],
   },
   {
     icon: "📸",
     title: "Photo Printing (Glossy)",
+    orderLink: WA_LINKS.photo,
     items: [
-      { label: "Passport Size – 6 pcs", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹60", individualUnit: "per set", bulk: "₹50", bulkUnit: "per set (5+)", waLink: WA_LINKS.photo },
-      { label: "Passport Size – 8 pcs", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹80", individualUnit: "per set", bulk: "₹70", bulkUnit: "per set (5+)", waLink: WA_LINKS.photo },
-      { label: "Postcard Size (4x6)", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹60", individualUnit: "per photo", bulk: "₹50", bulkUnit: "per photo (10+)", waLink: WA_LINKS.photo },
-      { label: "A4 Glossy Photo Print", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹80", individualUnit: "per print", bulk: "₹70", bulkUnit: "per print (10+)", waLink: WA_LINKS.photo },
+      { label: "Passport Size – 6 pcs", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹60", individualUnit: "per set", bulk: "₹50", bulkUnit: "per set (5+)" },
+      { label: "Passport Size – 8 pcs", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹80", individualUnit: "per set", bulk: "₹70", bulkUnit: "per set (5+)" },
+      { label: "Postcard Size (4x6)", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹60", individualUnit: "per photo", bulk: "₹50", bulkUnit: "per photo (10+)" },
+      { label: "A4 Glossy Photo Print", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹80", individualUnit: "per print", bulk: "₹70", bulkUnit: "per print (10+)" },
     ],
   },
   {
     icon: "🏷️",
     title: "Sticker Printing (Glossy)",
+    orderLink: WA_LINKS.sticker,
     items: [
-      { label: "A4 Sticker – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹40", individualUnit: "per sheet", bulk: "₹35", bulkUnit: "per sheet (10+)", waLink: WA_LINKS.sticker },
-      { label: "A4 Sticker – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹80", individualUnit: "per sheet", bulk: "₹70", bulkUnit: "per sheet (10+)", waLink: WA_LINKS.sticker },
-      { label: "A3 Sticker – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹70", individualUnit: "per sheet", bulk: "₹60", bulkUnit: "per sheet (10+)", waLink: WA_LINKS.sticker },
-      { label: "A3 Sticker – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹140", individualUnit: "per sheet", bulk: "₹120", bulkUnit: "per sheet (10+)", waLink: WA_LINKS.sticker },
+      { label: "A4 Sticker – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹40", individualUnit: "per sheet", bulk: "₹35", bulkUnit: "per sheet (10+)" },
+      { label: "A4 Sticker – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹80", individualUnit: "per sheet", bulk: "₹70", bulkUnit: "per sheet (10+)" },
+      { label: "A3 Sticker – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹70", individualUnit: "per sheet", bulk: "₹60", bulkUnit: "per sheet (10+)" },
+      { label: "A3 Sticker – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹140", individualUnit: "per sheet", bulk: "₹120", bulkUnit: "per sheet (10+)" },
     ],
   },
 ];
@@ -94,7 +97,7 @@ export default function PricingClient() {
                     ))}
                   </div>
                   <div className="px-6 py-4 bg-orange-50 border-t border-orange-100">
-                    <a href={cat.items[0].waLink} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-orange-600 transition">
+                    <a href={cat.orderLink} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-orange-600 transition">
                       <i className="bi bi-whatsapp" /> Order {cat.title}
                     </a>
                   </div>
