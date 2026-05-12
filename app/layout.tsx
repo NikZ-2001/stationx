@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ClosedOverlay from "@/components/ClosedOverlay";
+import PWAPrompt from "@/components/PWAPrompt";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -123,6 +124,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
+        <PWAPrompt />
       </body>
     </html>
   );
