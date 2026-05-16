@@ -30,6 +30,7 @@ export default function Header() {
           <Link href="/pricing" className="hover:text-orange-500 transition"><i className="bi bi-tag mr-1" />Pricing</Link>
           <Link href="/about" className="hover:text-orange-500 transition"><i className="bi bi-info-circle mr-1" />About</Link>
           <Link href="/contact" className="hover:text-orange-500 transition"><i className="bi bi-telephone mr-1" />Contact</Link>
+          <Link href="/delivery" className="hover:text-orange-500 transition"><i className="bi bi-truck mr-1" />Delivery</Link>
           <Link href="/feedback" className="hover:text-orange-500 transition"><i className="bi bi-chat-heart mr-1" />Feedback</Link>
         </nav>
         <a href="https://wa.me/919150190729?text=Hey%20StationX!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noreferrer" className="hidden md:inline-flex items-center gap-2 bg-orange-500 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 transition">
@@ -43,6 +44,7 @@ export default function Header() {
           <Link href="/pricing" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2"><i className="bi bi-tag" />Pricing</Link>
           <Link href="/about" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2"><i className="bi bi-info-circle" />About</Link>
           <Link href="/contact" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2"><i className="bi bi-telephone" />Contact</Link>
+          <Link href="/delivery" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2"><i className="bi bi-truck" />Delivery</Link>
           <Link href="/feedback" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2"><i className="bi bi-chat-heart" />Feedback</Link>
           <a href="https://wa.me/919150190729?text=Hey%20StationX!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noreferrer" className="bg-orange-500 text-white px-4 py-3 rounded-full text-center hover:bg-orange-600 transition flex items-center justify-center gap-2 mt-2">
             <i className="bi bi-whatsapp" /> Order on WhatsApp

@@ -34,7 +34,7 @@ export default function AboutPage() {
               <i className="bi bi-person-fill text-orange-500 text-2xl" />
             </div>
             <div>
-              <p className="font-bold text-gray-900 text-lg font-[var(--font-playfair)]">Nikson Andrew</p>
+              
               <p className="text-orange-500 text-sm font-medium">Founder, StationX</p>
             </div>
           </div>

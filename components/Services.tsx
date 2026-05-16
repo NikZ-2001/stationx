@@ -54,7 +54,7 @@ const services = [
     disabled: false,
     formats: ["PDF", "JPG", "PNG", "AI (Illustrator)"],
     paperTypes: ["130 GSM Glossy Sticker"],
-    sizes: ["A4 – B&W", "A4 – Color", "A3 – B&W", "A3 – Color"],
+    sizes: ["A5 – B&W", "A5 – Color", "A4 – B&W", "A4 – Color"],
   },
   {
     icon: "🗂️",

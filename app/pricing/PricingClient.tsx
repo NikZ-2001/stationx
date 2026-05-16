@@ -19,10 +19,10 @@ const categories = [
     title: "Photo Printing (Glossy)",
     orderLink: WA_LINKS.photo,
     items: [
-      { label: "Passport Size – 6 pcs", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹60", individualUnit: "per set", bulk: "₹50", bulkUnit: "per set (5+)" },
-      { label: "Passport Size – 8 pcs", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹80", individualUnit: "per set", bulk: "₹70", bulkUnit: "per set (5+)" },
-      { label: "Postcard Size (4x6)", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹60", individualUnit: "per photo", bulk: "₹50", bulkUnit: "per photo (10+)" },
-      { label: "A4 Glossy Photo Print", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹80", individualUnit: "per print", bulk: "₹70", bulkUnit: "per print (10+)" },
+      { label: "Passport Size – 6 pcs", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹40", individualUnit: "per set", bulk: "₹35", bulkUnit: "per set (5+)" },
+      { label: "Passport Size – 8 pcs", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹50", individualUnit: "per set", bulk: "₹45", bulkUnit: "per set (5+)" },
+      { label: "4x6 Photo Print", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹35", individualUnit: "per photo", bulk: "₹30", bulkUnit: "per photo (10+)" },
+      { label: "A4 Glossy Photo Print", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹50", individualUnit: "per print", bulk: "₹45", bulkUnit: "per print (10+)" },
     ],
   },
   {
@@ -30,10 +30,10 @@ const categories = [
     title: "Sticker Printing (Glossy)",
     orderLink: WA_LINKS.sticker,
     items: [
-      { label: "A4 Sticker – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹40", individualUnit: "per sheet", bulk: "₹35", bulkUnit: "per sheet (10+)" },
-      { label: "A4 Sticker – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹80", individualUnit: "per sheet", bulk: "₹70", bulkUnit: "per sheet (10+)" },
-      { label: "A3 Sticker – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹70", individualUnit: "per sheet", bulk: "₹60", bulkUnit: "per sheet (10+)" },
-      { label: "A3 Sticker – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹140", individualUnit: "per sheet", bulk: "₹120", bulkUnit: "per sheet (10+)" },
+      { label: "A5 Sticker – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹15", individualUnit: "per sheet", bulk: "₹12", bulkUnit: "per sheet (10+)" },
+      { label: "A5 Sticker – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹30", individualUnit: "per sheet", bulk: "₹25", bulkUnit: "per sheet (10+)" },
+      { label: "A4 Sticker – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹25", individualUnit: "per sheet", bulk: "₹20", bulkUnit: "per sheet (10+)" },
+      { label: "A4 Sticker – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹50", individualUnit: "per sheet", bulk: "₹45", bulkUnit: "per sheet (10+)" },
     ],
   },
 ];
