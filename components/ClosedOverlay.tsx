@@ -20,14 +20,14 @@ function getServiceStatus() {
   let nextSlotTime = "";
   if (!isOpen) {
     if (timeInMinutes < morningStart) {
-      nextSlot = "5:00 AM today";
-      nextSlotTime = "5:00 AM";
+      nextSlot = "8:00 AM today";
+      nextSlotTime = "8:00 AM";
     } else if (timeInMinutes >= morningEnd && timeInMinutes < eveningStart) {
       nextSlot = "6:00 PM today";
       nextSlotTime = "6:00 PM";
     } else {
-      nextSlot = "5:00 AM tomorrow";
-      nextSlotTime = "5:00 AM";
+      nextSlot = "8:00 AM tomorrow";
+      nextSlotTime = "8:00 AM";
     }
   }
 
@@ -71,7 +71,7 @@ export default function ClosedOverlay() {
             <p className="text-xs font-semibold text-gray-700 mb-3 uppercase tracking-widest">Working Hours</p>
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm text-gray-600">🌅 Morning</span>
-              <span className="text-sm font-semibold text-gray-900">5:00 AM – 11:00 AM</span>
+              <span className="text-sm font-semibold text-gray-900">8:00 AM – 11:00 AM</span>
             </div>
             <div className="flex items-center justify-between">
               <span className="text-sm text-gray-600">🌙 Evening</span>

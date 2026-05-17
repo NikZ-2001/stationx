@@ -19,18 +19,18 @@ function getServiceStatus() {
   let nextSlot = "";
   if (!isOpen) {
     if (timeInMinutes < morningStart) {
-      nextSlot = "Opens at 5:00 AM today";
+      nextSlot = "Opens at 8:00 AM today";
     } else if (timeInMinutes >= morningEnd && timeInMinutes < eveningStart) {
       nextSlot = "Opens at 6:00 PM today";
     } else {
-      nextSlot = "Opens at 5:00 AM tomorrow";
+      nextSlot = "Opens at 8:00 AM tomorrow";
     }
   }
 
   let currentSlot = "";
   if (isOpen) {
     if (timeInMinutes >= morningStart && timeInMinutes < morningEnd) {
-      currentSlot = "🌅 Morning slot: 5:00 AM – 11:00 AM";
+      currentSlot = "🌅 Morning slot: 8:00 AM – 11:00 AM";
     } else {
       currentSlot = "🌙 Evening slot: 6:00 PM – 12:00 AM";
     }

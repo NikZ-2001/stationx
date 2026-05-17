@@ -82,7 +82,7 @@ export default function ContactPage() {
                   <span className="text-sm text-gray-600 flex items-center gap-2">
                     🌅 Morning Slot
                   </span>
-                  <span className="text-sm font-semibold text-gray-900">5:00 AM – 11:00 AM</span>
+                  <span className="text-sm font-semibold text-gray-900">8:00 AM – 11:00 AM</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-600 flex items-center gap-2">

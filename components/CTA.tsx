@@ -30,7 +30,7 @@ export default function CTA() {
           </a>
         </div>
         <p className="text-gray-400 text-sm mt-8">
-          📍 Located in Ambattur, Chennai · 🌅 5:00 AM – 11:00 AM · 🌙 6:00 PM – 12:00 AM
+          📍 Located in Ambattur, Chennai · 🌅 8:00 AM – 11:00 AM · 🌙 6:00 PM – 12:00 AM
         </p>
       </div>
     </section>

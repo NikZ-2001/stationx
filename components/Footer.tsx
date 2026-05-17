@@ -68,7 +68,7 @@ export default function Footer() {
             <li className="flex items-start gap-2">
               <i className="bi bi-clock-fill mt-0.5" />
               <div>
-                <p>5:00 AM – 11:00 AM</p>
+                <p>8:00 AM – 11:00 AM</p>
                 <p>6:00 PM – 12:00 AM</p>
               </div>
             </li>

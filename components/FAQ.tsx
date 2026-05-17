@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     question: "What are your working hours?",
-    answer: "We operate during two slots — Morning: 5:00 AM to 11:00 AM and Evening: 6:00 PM to 12:00 AM. We are open when most offline shops are closed, so you can always count on us.",
+    answer: "We operate during two slots — Morning: 8:00 AM to 11:00 AM and Evening: 6:00 PM to 12:00 AM. We are open when most offline shops are closed, so you can always count on us.",
   },
 ];
 
