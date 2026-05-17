@@ -19,8 +19,7 @@ const categories = [
     title: "Photo Printing (Glossy)",
     orderLink: WA_LINKS.photo,
     items: [
-      { label: "Passport Size – 6 pcs", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹40", individualUnit: "per set", bulk: "₹35", bulkUnit: "per set (5+)" },
-      { label: "Passport Size – 8 pcs", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹50", individualUnit: "per set", bulk: "₹45", bulkUnit: "per set (5+)" },
+      { label: "Passport Size – 8 pcs", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹40", individualUnit: "per set", bulk: "₹35", bulkUnit: "per set (5+)" },
       { label: "4x6 Photo Print", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹35", individualUnit: "per photo", bulk: "₹30", bulkUnit: "per photo (10+)" },
       { label: "A4 Glossy Photo Print", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹50", individualUnit: "per print", bulk: "₹45", bulkUnit: "per print (10+)" },
     ],

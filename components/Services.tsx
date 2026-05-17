@@ -15,7 +15,7 @@ const services = [
     disabled: false,
     formats: ["PDF", "Word (.doc/.docx)", "JPG", "PNG", "Excel"],
     paperTypes: ["70 GSM Standard", "80 GSM Crisp"],
-    sizes: ["A4", "A3"],
+    sizes: ["A4", "A5"],
   },
   {
     icon: "🎨",
@@ -28,7 +28,7 @@ const services = [
     disabled: false,
     formats: ["PDF", "Word (.doc/.docx)", "JPG", "PNG", "PowerPoint"],
     paperTypes: ["70 GSM Standard", "80 GSM Crisp"],
-    sizes: ["A4", "A3"],
+    sizes: ["A4", "A5"],
   },
   {
     icon: "📷",
@@ -41,13 +41,13 @@ const services = [
     disabled: false,
     formats: ["JPG", "PNG", "HEIC", "PDF"],
     paperTypes: ["180 GSM Glossy"],
-    sizes: ["Passport Size – 6 pcs", "Passport Size – 8 pcs", "Postcard 4x6 inch", "A4 Photo", "A3 Photo"],
+    sizes: ["Passport Size – 8 pcs", "4x6 Photo Print", "A4 Glossy Photo Print"],
   },
   {
     icon: "🏷️",
     title: "Sticker Printing",
     subtitle: "Glossy — 130 GSM",
-    description: "Premium glossy sticker printing on 130 GSM paper. Available in B&W and Color, A4 and A3 sizes. Neat cutting available for rectangle and square designs.",
+    description: "Premium glossy sticker printing on 130 GSM paper. Available in B&W and Color, A4 and A5 sizes. Neat cutting available for rectangle and square designs.",
     badge: "New",
     badgeColor: "bg-green-100 text-green-600",
     waLink: WA_LINKS.sticker,

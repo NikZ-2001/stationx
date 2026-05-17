@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { DELIVERY_AREAS } from "@/app/config/deliveryAreas";
 
 const faqs = [
   {
@@ -12,11 +13,11 @@ const faqs = [
   },
   {
     question: "How long does delivery take?",
-    answer: "We aim to deliver within 2 hours from the time your order is accepted. We move fast so you don't have to wait.",
+    answer: "We will deliver within 2 hours in the listed delivery locations. For other locations, kindly contact us to get the customer quote.",
   },
   {
     question: "Which areas do you deliver to?",
-    answer: "We currently deliver within the Ambattur radius in Chennai. If you are unsure whether we cover your area, just drop us a WhatsApp message and we will confirm instantly.",
+    answer: "areas_list",
   },
   {
     question: "How do I make payment?",
@@ -61,7 +62,26 @@ export default function FAQ() {
               </button>
               {openIndex === index && (
                 <div className="px-6 pb-5">
-                  <p className="text-gray-500 text-sm leading-relaxed">{faq.answer}</p>
+                  {faq.answer === "areas_list" ? (
+                    <div>
+                      <p className="text-gray-500 text-sm leading-relaxed mb-3">
+                        We currently deliver to the following areas in Chennai within 2 hours:
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {DELIVERY_AREAS.map((area) => (
+                          <span key={area} className="text-xs font-medium px-3 py-1 rounded-full border bg-orange-50 text-orange-600 border-orange-100 flex items-center gap-1">
+                            <i className="bi bi-lightning-charge-fill text-orange-400 text-xs" />
+                            {area}
+                          </span>
+                        ))}
+                      </div>
+                      <p className="text-gray-400 text-xs mt-3">
+                        Area not listed? <a href="https://wa.me/919150190729?text=Hey%20StationX!%20I%20have%20a%20query." target="_blank" rel="noreferrer" className="text-orange-500 font-semibold hover:underline">Contact us on WhatsApp</a> to check availability.
+                      </p>
+                    </div>
+                  ) : (
+                    <p className="text-gray-500 text-sm leading-relaxed">{faq.answer}</p>
+                  )}
                 </div>
               )}
             </div>
