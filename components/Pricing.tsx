@@ -7,10 +7,10 @@ export default function Pricing() {
       category: "B&W Printout",
       waLink: WA_LINKS.bw,
       prices: [
-        { label: "Single Side 70 GSM", price: "₹2", unit: "per page" },
-        { label: "Single Side 80 GSM", price: "₹3", unit: "per page" },
-        { label: "Bulk 70 GSM (50+)", price: "₹1.50", unit: "per page" },
-        { label: "Bulk 80 GSM (50+)", price: "₹2.50", unit: "per page" },
+        { label: "Single Side 70 GSM", price: "₹1", unit: "per page" },
+        { label: "Single Side 80 GSM", price: "₹2", unit: "per page" },
+        { label: "Bulk 70 GSM (50+)", price: "₹0.80", unit: "per page" },
+        { label: "Bulk 80 GSM (50+)", price: "₹1.50", unit: "per page" },
       ],
     },
     {
@@ -18,10 +18,10 @@ export default function Pricing() {
       category: "Color Printing",
       waLink: WA_LINKS.color,
       prices: [
-        { label: "Single Side 70 GSM", price: "₹10", unit: "per page" },
-        { label: "Single Side 80 GSM", price: "₹12", unit: "per page" },
-        { label: "Bulk 70 GSM (25+)", price: "₹8", unit: "per page" },
-        { label: "Bulk 80 GSM (25+)", price: "₹10", unit: "per page" },
+        { label: "Single Side 70 GSM", price: "₹8", unit: "per page" },
+        { label: "Single Side 80 GSM", price: "₹10", unit: "per page" },
+        { label: "Bulk 70 GSM (25+)", price: "₹6", unit: "per page" },
+        { label: "Bulk 80 GSM (25+)", price: "₹8", unit: "per page" },
       ],
     },
     {

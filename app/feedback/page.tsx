@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import FeedbackForm from "./FeedbackForm";
 
 export const metadata: Metadata = {
-  title: "Feedback — StationX Printing Service Ambattur Chennai",
+  title: "Feedback",
   description: "Share your feedback about StationX printing service in Ambattur, Chennai. Help us serve you better.",
+  alternates: { canonical: "https://stationx.vercel.app/feedback" },
 };
 
 export default function FeedbackPage() {

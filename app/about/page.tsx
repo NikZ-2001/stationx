@@ -2,8 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us — StationX Printing Service Ambattur Chennai",
-  description: "Learn about StationX — a premium printing service started in 2026 in Ambattur, Chennai. Founded by Nikson Andrew to solve last minute printing needs with home delivery.",
+  title: "About Us",
+  description: "Learn about StationX — a premium printing service started in 2026 in Ambattur, Chennai by Nikson Andrew. Home delivery, secure document handling, fast turnaround.",
+  alternates: { canonical: "https://stationx.vercel.app/about" },
   openGraph: {
     title: "About StationX — Printing Service Ambattur Chennai",
     description: "StationX was started to solve last minute printing needs in Ambattur, Chennai. No queues, home delivery, secure document handling.",

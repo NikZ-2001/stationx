@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { WA_LINKS } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Services — StationX Printing Service Ambattur Chennai",
-  description: "StationX offers B&W printout, color printing, photo printing and sticker printing in Ambattur, Chennai. Home delivery available.",
+  title: "About Us",
+  description: "Learn about StationX — a premium printing service started in 2026 in Ambattur, Chennai by Nikson Andrew. Home delivery, secure document handling, fast turnaround.",
+  alternates: { canonical: "https://stationx.vercel.app/about" },
   openGraph: {
-    title: "Our Services — StationX Ambattur Chennai",
-    description: "B&W printout, color printing, photo printing, sticker printing with home delivery in Ambattur Chennai.",
-    url: "https://stationx.vercel.app/services",
+    title: "About StationX — Printing Service Ambattur Chennai",
+    description: "StationX was started to solve last minute printing needs in Ambattur, Chennai. No queues, home delivery, secure document handling.",
+    url: "https://stationx.vercel.app/about",
   },
 };
 

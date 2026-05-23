@@ -3,15 +3,15 @@ import { useState } from "react";
 import { WA_LINKS } from "@/lib/whatsapp";
 
 const categories = [
-  {
+{
     icon: "🖨️",
     title: "Document Printing",
     orderLink: WA_LINKS.document,
     items: [
-      { label: "B&W Print – 70 GSM", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹2", individualUnit: "per page", bulk: "₹1.50", bulkUnit: "per page (50+)" },
-      { label: "B&W Print – 80 GSM Crisp", tag: "Most Popular", tagColor: "bg-orange-100 text-orange-600", individual: "₹3", individualUnit: "per page", bulk: "₹2.50", bulkUnit: "per page (50+)" },
-      { label: "Color Print – 70 GSM", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹10", individualUnit: "per page", bulk: "₹8", bulkUnit: "per page (25+)" },
-      { label: "Color Print – 80 GSM Crisp", tag: "Crisp", tagColor: "bg-purple-100 text-purple-600", individual: "₹12", individualUnit: "per page", bulk: "₹10", bulkUnit: "per page (25+)" },
+      { label: "B&W Print – 70 GSM", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹1", individualUnit: "per page", bulk: "₹0.80", bulkUnit: "per page (50+)" },
+      { label: "B&W Print – 80 GSM Crisp", tag: "Most Popular", tagColor: "bg-orange-100 text-orange-600", individual: "₹2", individualUnit: "per page", bulk: "₹1.50", bulkUnit: "per page (50+)" },
+      { label: "Color Print – 70 GSM", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹8", individualUnit: "per page", bulk: "₹6", bulkUnit: "per page (25+)" },
+      { label: "Color Print – 80 GSM Crisp", tag: "Crisp", tagColor: "bg-purple-100 text-purple-600", individual: "₹10", individualUnit: "per page", bulk: "₹8", bulkUnit: "per page (25+)" },
     ],
   },
   {

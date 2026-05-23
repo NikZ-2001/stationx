@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ClosedOverlay from "@/components/ClosedOverlay";
-
+import PWAPrompt from "@/components/PWAPrompt";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -24,8 +24,12 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "StationX — Printing Service in Ambattur, Chennai",
-  description: "StationX offers premium printing services in Ambattur, Chennai. Xerox, printout, photo print, color printing and sticker printing with home delivery. Serving Thirumullaivoyal, Pudur, Oragadam, Kallikuppam, Ayyapakkam, Annanur, Vaishnavi Nagar, Vijayalakshmi Puram, Ambattur OT, Cholambedu, Manikandapuram and nearby areas.",
+  metadataBase: new URL("https://stationx.vercel.app"),
+  title: {
+    default: "StationX — Printing Service in Ambattur, Chennai",
+    template: "%s | StationX Ambattur Chennai",
+  },
+  description: "StationX offers premium printing services in Ambattur, Chennai. Xerox, printout, photo print, color printing and sticker printing with home delivery. Serving Thirumullaivoyal, Pudur, Kallikuppam, Annanur and nearby areas.",
   keywords: [
     "printing service Ambattur",
     "xerox Ambattur",
@@ -37,26 +41,21 @@ export const metadata: Metadata = {
     "printing service Chennai",
     "Thirumullaivoyal printing",
     "Pudur xerox",
-    "Oragadam printing",
     "Kallikuppam printout",
-    "Ayyapakkam xerox",
     "Annanur printing",
-    "Vaishnavi Nagar printout",
-    "Vijayalakshmi Puram xerox",
-    "Ambattur OT printing",
-    "Cholambedu printout",
-    "Manikandapuram xerox",
-    "StationX",
-    "stationx chennai",
+    "Cholambedu xerox",
+    "Oragadam printing",
     "home delivery printing Chennai",
     "photo print delivery Chennai",
     "color printing Ambattur",
     "sticker printing Ambattur",
+    "StationX",
+    "stationx chennai",
+    "stationx ambattur",
   ],
   authors: [{ name: "StationX", url: "https://stationx.vercel.app" }],
   creator: "StationX",
   publisher: "StationX",
-  metadataBase: new URL("https://stationx.vercel.app"),
   alternates: {
     canonical: "https://stationx.vercel.app",
   },
@@ -82,6 +81,16 @@ export const metadata: Metadata = {
     description: "Premium xerox, printout, photo print and sticker printing with home delivery in Ambattur, Chennai.",
     images: ["/icon.png"],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -92,21 +101,12 @@ export const metadata: Metadata = {
     icon: "/icon.png",
     apple: "/icon.png",
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <meta name="google-site-verification" content="HdTwFivZv758U8A6OKslG5jtdre3TGg3CEAwNvdHR5o" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -116,6 +116,54 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="geo.placename" content="Ambattur, Chennai" />
         <meta name="geo.position" content="13.1143;80.1548" />
         <meta name="ICBM" content="13.1143, 80.1548" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "StationX",
+              "description": "Premium printing service in Ambattur, Chennai offering xerox, color printing, photo printing and sticker printing with home delivery.",
+              "url": "https://stationx.vercel.app",
+              "telephone": "+919150190729",
+              "email": "stationx.chennai@gmail.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Thirumullaivoyal Colony",
+                "addressLocality": "Ambattur",
+                "addressRegion": "Chennai",
+                "addressCountry": "IN",
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 13.1440,
+                "longitude": 80.1377,
+              },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                  "opens": "05:00",
+                  "closes": "11:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                  "opens": "18:00",
+                  "closes": "23:59",
+                },
+              ],
+              "sameAs": [
+                "https://www.instagram.com/stationx.chennai",
+              ],
+              "priceRange": "₹",
+              "currenciesAccepted": "INR",
+              "paymentAccepted": "Cash, UPI",
+              "areaServed": "Ambattur, Chennai",
+              "serviceType": "Printing Service",
+            }),
+          }}
+        />
       </head>
       <body className={`${playfair.variable} ${inter.variable} antialiased`} suppressHydrationWarning>
         <ClosedOverlay />
@@ -124,7 +172,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
-      
+        <PWAPrompt />
       </body>
     </html>
   );
