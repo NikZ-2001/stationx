@@ -3,25 +3,14 @@ import { WA_LINKS } from "@/lib/whatsapp";
 export default function Pricing() {
   const plans = [
     {
-      icon: "🖤",
-      category: "B&W Printout",
-      waLink: WA_LINKS.bw,
+      icon: "🖨️",
+      category: "Document Printing",
+      waLink: WA_LINKS.document,
       prices: [
-        { label: "Single Side 70 GSM", price: "₹1", unit: "per page" },
-        { label: "Single Side 80 GSM", price: "₹2", unit: "per page" },
-        { label: "Bulk 70 GSM (50+)", price: "₹0.80", unit: "per page" },
-        { label: "Bulk 80 GSM (50+)", price: "₹1.50", unit: "per page" },
-      ],
-    },
-    {
-      icon: "🎨",
-      category: "Color Printing",
-      waLink: WA_LINKS.color,
-      prices: [
-        { label: "Single Side 70 GSM", price: "₹8", unit: "per page" },
-        { label: "Single Side 80 GSM", price: "₹10", unit: "per page" },
-        { label: "Bulk 70 GSM (25+)", price: "₹6", unit: "per page" },
-        { label: "Bulk 80 GSM (25+)", price: "₹8", unit: "per page" },
+        { label: "Budget A4 – B&W", price: "₹1", unit: "per page" },
+        { label: "Budget A4 – Color", price: "₹8", unit: "per page" },
+        { label: "Crisp A4 – B&W", price: "₹2", unit: "per page" },
+        { label: "Crisp A4 – Color", price: "₹10", unit: "per page" },
       ],
     },
     {
@@ -29,10 +18,13 @@ export default function Pricing() {
       category: "Photo Printing",
       waLink: WA_LINKS.photo,
       prices: [
-        { label: "Passport Size 8 pcs", price: "₹20", unit: "per set" },
-        { label: "Postcard Size", price: "₹15", unit: "per photo" },
-        { label: "A4 Glossy Print", price: "₹25", unit: "per print" },
-        { label: "A5 Glossy Print", price: "₹10", unit: "per print" },
+        { label: "Glossy A4 – B&W", price: "₹15", unit: "per page" },
+        { label: "Glossy A4 – Color", price: "₹20", unit: "per page" },
+        { label: "Glossy A5 – B&W", price: "₹7.50", unit: "per page" },
+        { label: "Glossy A5 – Color", price: "₹10", unit: "per page" },
+        { label: "4x6 Postcard – B&W", price: "₹7", unit: "per photo" },
+        { label: "4x6 Postcard – Color", price: "₹10", unit: "per photo" },
+        { label: "Passport 8 pcs – Color", price: "₹15", unit: "per set" },
       ],
     },
     {
@@ -40,10 +32,14 @@ export default function Pricing() {
       category: "Sticker Printing",
       waLink: WA_LINKS.sticker,
       prices: [
-        { label: "A4 Sticker B&W", price: "₹25", unit: "per sheet" },
-        { label: "A4 Sticker Color", price: "₹35", unit: "per sheet" },
-        { label: "A5 Sticker B&W", price: "₹15", unit: "per sheet" },
-        { label: "A5 Sticker Color", price: "₹20", unit: "per sheet" },
+        { label: "Glossy A4 – B&W", price: "₹20", unit: "per sheet" },
+        { label: "Glossy A4 – Color", price: "₹25", unit: "per sheet" },
+        { label: "Glossy A5 – B&W", price: "₹10", unit: "per sheet" },
+        { label: "Glossy A5 – Color", price: "₹12.50", unit: "per sheet" },
+        { label: "Budget A4 – B&W", price: "₹10", unit: "per sheet" },
+        { label: "Budget A4 – Color", price: "₹15", unit: "per sheet" },
+        { label: "Budget A5 – B&W", price: "₹5", unit: "per sheet" },
+        { label: "Budget A5 – Color", price: "₹7.50", unit: "per sheet" },
       ],
     },
   ];
@@ -81,7 +77,7 @@ export default function Pricing() {
         </div>
 
         {/* Desktop: grid */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan) => (
             <div key={plan.category} className="rounded-2xl p-8 bg-white shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <p className="text-3xl mb-3">{plan.icon}</p>

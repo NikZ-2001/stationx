@@ -3,37 +3,44 @@ import { useState } from "react";
 import { WA_LINKS } from "@/lib/whatsapp";
 
 const categories = [
-{
+  {
     icon: "🖨️",
     title: "Document Printing",
     orderLink: WA_LINKS.document,
     items: [
-      { label: "B&W Print – 70 GSM", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹1", individualUnit: "per page", bulk: "₹0.80", bulkUnit: "per page (50+)" },
-      { label: "B&W Print – 80 GSM Crisp", tag: "Most Popular", tagColor: "bg-orange-100 text-orange-600", individual: "₹2", individualUnit: "per page", bulk: "₹1.50", bulkUnit: "per page (50+)" },
-      { label: "Color Print – 70 GSM", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹8", individualUnit: "per page", bulk: "₹6", bulkUnit: "per page (25+)" },
-      { label: "Color Print – 80 GSM Crisp", tag: "Crisp", tagColor: "bg-purple-100 text-purple-600", individual: "₹10", individualUnit: "per page", bulk: "₹8", bulkUnit: "per page (25+)" },
+      { label: "Budget A4 – B&W", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹1", individualUnit: "per page", bulk: "₹0.80", bulkUnit: "per page (50+)" },
+      { label: "Budget A4 – Color", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹8", individualUnit: "per page", bulk: "₹6.50", bulkUnit: "per page (25+)" },
+      { label: "Crisp A4 – B&W", tag: "Crisp", tagColor: "bg-orange-100 text-orange-600", individual: "₹2", individualUnit: "per page", bulk: "₹1.50", bulkUnit: "per page (50+)" },
+      { label: "Crisp A4 – Color", tag: "Crisp", tagColor: "bg-orange-100 text-orange-600", individual: "₹10", individualUnit: "per page", bulk: "₹8", bulkUnit: "per page (25+)" },
     ],
   },
   {
-    icon: "📸",
+    icon: "📷",
     title: "Photo Printing (Glossy)",
     orderLink: WA_LINKS.photo,
     items: [
-      { label: "Passport Size – 8 pcs", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹20", individualUnit: "per set", bulk: "₹15", bulkUnit: "per set (5+)" },
-      { label: "Postcard Size", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹15", individualUnit: "per photo", bulk: "₹10", bulkUnit: "per photo (10+)" },
-      { label: "A4 Glossy Photo Print", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹25", individualUnit: "per print", bulk: "₹20", bulkUnit: "per print (10+)" },
-      { label: "A5 Glossy Photo Print", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹10", individualUnit: "per print", bulk: "₹7", bulkUnit: "per print (10+)" },
+      { label: "Glossy A4 – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹15", individualUnit: "per page", bulk: "₹12", bulkUnit: "per page (10+)" },
+      { label: "Glossy A4 – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹20", individualUnit: "per page", bulk: "₹17", bulkUnit: "per page (10+)" },
+      { label: "Glossy A5 – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹7.50", individualUnit: "per page", bulk: "₹6", bulkUnit: "per page (10+)" },
+      { label: "Glossy A5 – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹10", individualUnit: "per page", bulk: "₹8", bulkUnit: "per page (10+)" },
+      { label: "4x6 Postcard – B&W", tag: "Photo", tagColor: "bg-purple-100 text-purple-600", individual: "₹7", individualUnit: "per photo", bulk: "₹5.50", bulkUnit: "per photo (10+)" },
+      { label: "4x6 Postcard – Color", tag: "Photo", tagColor: "bg-purple-100 text-purple-600", individual: "₹10", individualUnit: "per photo", bulk: "₹8", bulkUnit: "per photo (10+)" },
+      { label: "Passport 8 pcs – Color", tag: "Photo", tagColor: "bg-purple-100 text-purple-600", individual: "₹15", individualUnit: "per set", bulk: "₹12", bulkUnit: "per set (5+)" },
     ],
   },
   {
     icon: "🏷️",
-    title: "Sticker Printing (Glossy)",
+    title: "Sticker Printing",
     orderLink: WA_LINKS.sticker,
     items: [
-      { label: "A4 Sticker – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹25", individualUnit: "per sheet", bulk: "₹20", bulkUnit: "per sheet (10+)" },
-      { label: "A4 Sticker – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹35", individualUnit: "per sheet", bulk: "₹30", bulkUnit: "per sheet (10+)" },
-      { label: "A5 Sticker – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹15", individualUnit: "per sheet", bulk: "₹12", bulkUnit: "per sheet (10+)" },
-      { label: "A5 Sticker – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹20", individualUnit: "per sheet", bulk: "₹17", bulkUnit: "per sheet (10+)" },
+      { label: "Glossy A4 – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹20", individualUnit: "per sheet", bulk: "₹17", bulkUnit: "per sheet (10+)" },
+      { label: "Glossy A4 – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹25", individualUnit: "per sheet", bulk: "₹22", bulkUnit: "per sheet (10+)" },
+      { label: "Glossy A5 – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹10", individualUnit: "per sheet", bulk: "₹8", bulkUnit: "per sheet (10+)" },
+      { label: "Glossy A5 – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹12.50", individualUnit: "per sheet", bulk: "₹10", bulkUnit: "per sheet (10+)" },
+      { label: "Budget A4 – B&W", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹10", individualUnit: "per sheet", bulk: "₹8", bulkUnit: "per sheet (10+)" },
+      { label: "Budget A4 – Color", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹15", individualUnit: "per sheet", bulk: "₹12", bulkUnit: "per sheet (10+)" },
+      { label: "Budget A5 – B&W", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹5", individualUnit: "per sheet", bulk: "₹4", bulkUnit: "per sheet (10+)" },
+      { label: "Budget A5 – Color", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹7.50", individualUnit: "per sheet", bulk: "₹6", bulkUnit: "per sheet (10+)" },
     ],
   },
 ];
