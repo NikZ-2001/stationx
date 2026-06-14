@@ -12,20 +12,23 @@ const categories = [
       { label: "Budget A4 – Color", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹8", individualUnit: "per page", bulk: "₹6.50", bulkUnit: "per page (25+)" },
       { label: "Crisp A4 – B&W", tag: "Crisp", tagColor: "bg-orange-100 text-orange-600", individual: "₹2", individualUnit: "per page", bulk: "₹1.50", bulkUnit: "per page (50+)" },
       { label: "Crisp A4 – Color", tag: "Crisp", tagColor: "bg-orange-100 text-orange-600", individual: "₹10", individualUnit: "per page", bulk: "₹8", bulkUnit: "per page (25+)" },
+      { label: "Bond 100GSM – B&W", tag: "Bond", tagColor: "bg-gray-100 text-gray-600", individual: "₹5", individualUnit: "per page", bulk: "₹4", bulkUnit: "per page (25+)" },
+      { label: "Bond 100GSM – Color", tag: "Bond", tagColor: "bg-gray-100 text-gray-600", individual: "₹12", individualUnit: "per page", bulk: "₹10", bulkUnit: "per page (25+)" },
+      { label: "Ledger Green 90GSM", tag: "Ledger", tagColor: "bg-green-100 text-green-600", individual: "₹3", individualUnit: "per page", bulk: "₹2.50", bulkUnit: "per page (50+)" },
     ],
   },
   {
     icon: "📷",
-    title: "Photo Printing (Glossy)",
+    title: "Photo Printing",
     orderLink: WA_LINKS.photo,
     items: [
-      { label: "Glossy A4 – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹15", individualUnit: "per page", bulk: "₹12", bulkUnit: "per page (10+)" },
-      { label: "Glossy A4 – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹20", individualUnit: "per page", bulk: "₹17", bulkUnit: "per page (10+)" },
-      { label: "Glossy A5 – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹7.50", individualUnit: "per page", bulk: "₹6", bulkUnit: "per page (10+)" },
-      { label: "Glossy A5 – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹10", individualUnit: "per page", bulk: "₹8", bulkUnit: "per page (10+)" },
-      { label: "4x6 Postcard – B&W", tag: "Photo", tagColor: "bg-purple-100 text-purple-600", individual: "₹7", individualUnit: "per photo", bulk: "₹5.50", bulkUnit: "per photo (10+)" },
-      { label: "4x6 Postcard – Color", tag: "Photo", tagColor: "bg-purple-100 text-purple-600", individual: "₹10", individualUnit: "per photo", bulk: "₹8", bulkUnit: "per photo (10+)" },
-      { label: "Passport 8 pcs – Color", tag: "Photo", tagColor: "bg-purple-100 text-purple-600", individual: "₹15", individualUnit: "per set", bulk: "₹12", bulkUnit: "per set (5+)" },
+      { label: "Glossy 130GSM A4 – B&W", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹7.50", individualUnit: "per page", bulk: "₹6", bulkUnit: "per page (10+)" },
+      { label: "Glossy 130GSM A4 – Color", tag: "Glossy", tagColor: "bg-green-100 text-green-600", individual: "₹10", individualUnit: "per page", bulk: "₹8", bulkUnit: "per page (10+)" },
+      { label: "Premium 180GSM A4 – B&W", tag: "Premium", tagColor: "bg-purple-100 text-purple-600", individual: "₹15", individualUnit: "per page", bulk: "₹12", bulkUnit: "per page (10+)" },
+      { label: "Premium 180GSM A4 – Color", tag: "Premium", tagColor: "bg-purple-100 text-purple-600", individual: "₹20", individualUnit: "per page", bulk: "₹17", bulkUnit: "per page (10+)" },
+      { label: "4x6 Postcard – B&W", tag: "Photo", tagColor: "bg-blue-100 text-blue-600", individual: "₹7", individualUnit: "per photo", bulk: "₹5.50", bulkUnit: "per photo (10+)" },
+      { label: "4x6 Postcard – Color", tag: "Photo", tagColor: "bg-blue-100 text-blue-600", individual: "₹10", individualUnit: "per photo", bulk: "₹8", bulkUnit: "per photo (10+)" },
+      { label: "Passport 8 pcs + Sticker", tag: "Photo", tagColor: "bg-blue-100 text-blue-600", individual: "₹20", individualUnit: "per set", bulk: "₹17", bulkUnit: "per set (5+)" },
     ],
   },
   {
@@ -41,6 +44,39 @@ const categories = [
       { label: "Budget A4 – Color", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹15", individualUnit: "per sheet", bulk: "₹12", bulkUnit: "per sheet (10+)" },
       { label: "Budget A5 – B&W", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹5", individualUnit: "per sheet", bulk: "₹4", bulkUnit: "per sheet (10+)" },
       { label: "Budget A5 – Color", tag: "Budget", tagColor: "bg-blue-100 text-blue-600", individual: "₹7.50", individualUnit: "per sheet", bulk: "₹6", bulkUnit: "per sheet (10+)" },
+    ],
+  },
+  {
+    icon: "🗂️",
+    title: "Lamination",
+    orderLink: WA_LINKS.lamination,
+    note: "Lamination charges exclude printing cost.",
+    items: [
+      { label: "A4 Lamination", tag: "Lamination", tagColor: "bg-yellow-100 text-yellow-600", individual: "₹10", individualUnit: "per page", bulk: "₹8", bulkUnit: "per page (10+)" },
+      { label: "ID Card Lamination", tag: "Lamination", tagColor: "bg-yellow-100 text-yellow-600", individual: "₹5", individualUnit: "per card", bulk: "₹4", bulkUnit: "per card (10+)" },
+    ],
+  },
+  {
+    icon: "🔗",
+    title: "Spiral Binding",
+    orderLink: WA_LINKS.spiral,
+    note: "Printing charges are additional.",
+    items: [
+      { label: "1–25 Pages", tag: "Binding", tagColor: "bg-indigo-100 text-indigo-600", individual: "₹20", individualUnit: "per book", bulk: "₹18", bulkUnit: "per book (5+)" },
+      { label: "26–50 Pages", tag: "Binding", tagColor: "bg-indigo-100 text-indigo-600", individual: "₹25", individualUnit: "per book", bulk: "₹22", bulkUnit: "per book (5+)" },
+      { label: "51–100 Pages", tag: "Binding", tagColor: "bg-indigo-100 text-indigo-600", individual: "₹30", individualUnit: "per book", bulk: "₹27", bulkUnit: "per book (5+)" },
+      { label: "100+ Pages", tag: "Binding", tagColor: "bg-indigo-100 text-indigo-600", individual: "₹35", individualUnit: "per book", bulk: "₹30", bulkUnit: "per book (5+)" },
+    ],
+  },
+  {
+    icon: "📚",
+    title: "Soft Binding",
+    orderLink: WA_LINKS.soft,
+    note: "Printing charges are additional.",
+    items: [
+      { label: "1–50 Pages", tag: "Binding", tagColor: "bg-indigo-100 text-indigo-600", individual: "₹20", individualUnit: "per book", bulk: "₹18", bulkUnit: "per book (5+)" },
+      { label: "51–100 Pages", tag: "Binding", tagColor: "bg-indigo-100 text-indigo-600", individual: "₹30", individualUnit: "per book", bulk: "₹27", bulkUnit: "per book (5+)" },
+      { label: "100+ Pages", tag: "Binding", tagColor: "bg-indigo-100 text-indigo-600", individual: "₹40", individualUnit: "per book", bulk: "₹35", bulkUnit: "per book (5+)" },
     ],
   },
 ];
@@ -62,7 +98,6 @@ export default function PricingClient() {
           <p className="text-gray-500 mt-3 text-lg">No hidden charges. What you see is what you pay.</p>
         </div>
 
-        {/* Accordion */}
         <div className="space-y-3 mb-8">
           {categories.map((cat, index) => (
             <div key={cat.title} className="bg-white rounded-2xl shadow-sm overflow-hidden">
@@ -103,6 +138,11 @@ export default function PricingClient() {
                       </div>
                     ))}
                   </div>
+                  {"note" in cat && cat.note && (
+                    <div className="px-6 py-3 bg-gray-50 border-t border-gray-100">
+                      <p className="text-xs text-gray-400 italic">* {cat.note}</p>
+                    </div>
+                  )}
                   <div className="px-6 py-4 bg-orange-50 border-t border-orange-100">
                     <a href={cat.orderLink} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-orange-600 transition">
                       <i className="bi bi-whatsapp" /> Order {cat.title}
@@ -114,7 +154,6 @@ export default function PricingClient() {
           ))}
         </div>
 
-        {/* Included Services */}
         <div className="bg-white rounded-2xl shadow-sm p-6 mb-6">
           <h3 className="text-base font-bold text-gray-900 font-[var(--font-playfair)] mb-4">📦 Included Services</h3>
           <div className="flex flex-wrap gap-4">
@@ -129,7 +168,6 @@ export default function PricingClient() {
           </div>
         </div>
 
-        {/* Custom Quote */}
         <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
           <i className="bi bi-chat-dots text-4xl text-gray-400 mb-4 block" />
           <h2 className="text-2xl font-bold text-gray-900 font-[var(--font-playfair)] mb-3">Need a Custom Quote?</h2>

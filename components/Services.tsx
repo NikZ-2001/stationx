@@ -5,95 +5,82 @@ import ServiceModal from "@/components/ServiceModal";
 
 const services = [
   {
-    icon: "🖤",
-    title: "B&W Printing",
-    subtitle: "Xerox / Black & White",
-    description: "Fast and affordable black & white printing for documents, notes, forms, and assignments. Available in 70 GSM and 80 GSM Crisp paper.",
+    icon: "🖨️",
+    title: "Document Printing",
+    subtitle: "Budget & Crisp Quality",
+    description: "Fast and affordable document printing on Budget 70GSM, Crisp 80GSM, Bond 100GSM, and Ledger paper. Available in B&W and Color.",
     badge: "Most Popular",
     badgeColor: "bg-orange-100 text-orange-600",
-    waLink: WA_LINKS.bw,
+    waLink: WA_LINKS.document,
     disabled: false,
     formats: ["PDF", "Word (.doc/.docx)", "JPG", "PNG", "Excel"],
-    paperTypes: ["70 GSM Standard", "80 GSM Crisp"],
-    sizes: ["A4", "A5"],
-  },
-  {
-    icon: "🎨",
-    title: "Color Printing",
-    subtitle: "Vivid & Sharp",
-    description: "High quality color prints for presentations, posters, brochures, and assignments. Available in 70 GSM and 80 GSM Crisp paper.",
-    badge: "High Quality",
-    badgeColor: "bg-blue-100 text-blue-600",
-    waLink: WA_LINKS.color,
-    disabled: false,
-    formats: ["PDF", "Word (.doc/.docx)", "JPG", "PNG", "PowerPoint"],
-    paperTypes: ["70 GSM Standard", "80 GSM Crisp"],
-    sizes: ["A4", "A5"],
+    paperTypes: ["Budget 70 GSM", "Crisp 80 GSM", "Bond 100 GSM", "Ledger Green 90 GSM"],
+    sizes: ["A4 – B&W", "A4 – Color"],
   },
   {
     icon: "📷",
     title: "Photo Printing",
-    subtitle: "Glossy — 180 GSM",
-    description: "Beautiful glossy photo prints on premium 180 GSM paper. Perfect for memories, gifts, portfolios, and passport photos.",
+    subtitle: "Glossy — 130 & 180 GSM",
+    description: "Beautiful glossy photo prints on 130 GSM and premium 180 GSM paper. Passport photos with sticker back included.",
     badge: "Premium",
     badgeColor: "bg-purple-100 text-purple-600",
     waLink: WA_LINKS.photo,
     disabled: false,
     formats: ["JPG", "PNG", "HEIC", "PDF"],
-    paperTypes: ["180 GSM Glossy"],
-    sizes: ["Passport Size – 8 pcs", "4x6 Photo Print", "A4 Glossy Photo Print"],
+    paperTypes: ["130 GSM Glossy", "180 GSM Premium Glossy"],
+    sizes: ["A4", "A5", "4x6 Postcard", "Passport 8 pcs"],
   },
   {
     icon: "🏷️",
     title: "Sticker Printing",
-    subtitle: "Glossy — 130 GSM",
-    description: "Premium glossy sticker printing on 130 GSM paper. Available in B&W and Color, A4 and A5 sizes. Neat cutting available for rectangle and square designs.",
+    subtitle: "Glossy & Budget",
+    description: "Premium glossy and budget sticker printing. Available in A4 and A5 sizes, B&W and Color.",
     badge: "New",
     badgeColor: "bg-green-100 text-green-600",
     waLink: WA_LINKS.sticker,
     disabled: false,
-    formats: ["PDF", "JPG", "PNG", "AI (Illustrator)"],
-    paperTypes: ["130 GSM Glossy Sticker"],
-    sizes: ["A5 – B&W", "A5 – Color", "A4 – B&W", "A4 – Color"],
+    formats: ["PDF", "JPG", "PNG", "AI"],
+    paperTypes: ["Glossy Sticker", "Budget Sticker"],
+    sizes: ["A4 – B&W", "A4 – Color", "A5 – B&W", "A5 – Color"],
   },
   {
     icon: "🗂️",
     title: "Lamination",
-    subtitle: "Coming Soon",
-    description: "Protect your important documents and photos with our lamination service.",
-    badge: "Coming Soon",
-    badgeColor: "bg-gray-100 text-gray-400",
-    waLink: "",
-    disabled: true,
-    formats: [],
-    paperTypes: [],
-    sizes: [],
+    subtitle: "A4 & ID Card",
+    description: "Protect your documents and ID cards with our lamination service. A4 and ID card sizes available. Lamination charges exclude printing cost.",
+    badge: "Available",
+    badgeColor: "bg-blue-100 text-blue-600",
+    waLink: WA_LINKS.lamination,
+    disabled: false,
+    formats: ["Any printed document"],
+    paperTypes: ["Thermal Lamination"],
+    sizes: ["A4 – ₹10", "ID Card – ₹5"],
   },
   {
     icon: "🔗",
     title: "Spiral Binding",
-    subtitle: "Coming Soon",
-    description: "Professional spiral binding for reports, presentations, and books.",
-    badge: "Coming Soon",
-    badgeColor: "bg-gray-100 text-gray-400",
-    waLink: "",
-    disabled: true,
-    formats: [],
-    paperTypes: [],
-    sizes: [],
+    subtitle: "1 to 100+ Pages",
+    description: "Professional spiral binding for reports, presentations, and books. Printing charges are additional.",
+    badge: "Available",
+    badgeColor: "bg-blue-100 text-blue-600",
+    waLink: WA_LINKS.spiral,
+    disabled: false,
+    formats: ["Any printed document"],
+    paperTypes: ["Spiral Wire Binding"],
+    sizes: ["1–25 pages – ₹20", "26–50 pages – ₹25", "51–100 pages – ₹30", "100+ pages – ₹35"],
   },
   {
-    icon: "✏️",
-    title: "Stationery",
-    subtitle: "Coming Soon",
-    description: "Pens, notebooks, files, and more — your one stop stationery shop coming soon.",
-    badge: "Coming Soon",
-    badgeColor: "bg-gray-100 text-gray-400",
-    waLink: "",
-    disabled: true,
-    formats: [],
-    paperTypes: [],
-    sizes: [],
+    icon: "📚",
+    title: "Soft Binding",
+    subtitle: "1 to 100+ Pages",
+    description: "Clean and professional soft binding for projects, reports, and books. Printing charges are additional.",
+    badge: "Available",
+    badgeColor: "bg-blue-100 text-blue-600",
+    waLink: WA_LINKS.soft,
+    disabled: false,
+    formats: ["Any printed document"],
+    paperTypes: ["Soft Cover Binding"],
+    sizes: ["1–50 pages – ₹20", "51–100 pages – ₹30", "100+ pages – ₹40"],
   },
 ];
 
@@ -114,27 +101,27 @@ export default function Services() {
         {/* Mobile: horizontal scroll */}
         <div className="flex gap-4 overflow-x-auto pb-4 md:hidden scrollbar-hide snap-x snap-mandatory">
           {services.map((service) => (
-            <div key={service.title} onClick={() => !service.disabled && setSelectedService(service)} className={`flex-none w-64 bg-white border rounded-2xl p-5 shadow-sm snap-start transition-all duration-200 ${service.disabled ? "opacity-60" : "active:scale-95 cursor-pointer"}`}>
+            <div key={service.title} onClick={() => setSelectedService(service)} className="flex-none w-64 bg-white border rounded-2xl p-5 shadow-sm snap-start transition-all duration-200 active:scale-95 cursor-pointer">
               <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 ${service.badgeColor}`}>{service.badge}</span>
               <p className="text-4xl mb-3">{service.icon}</p>
               <h3 className="text-base font-bold text-gray-900 font-[var(--font-playfair)]">{service.title}</h3>
               <p className="text-orange-500 text-xs font-medium mb-1">{service.subtitle}</p>
               <p className="text-gray-500 text-xs leading-relaxed line-clamp-2">{service.description}</p>
-              {!service.disabled && <p className="text-orange-500 text-xs font-semibold mt-3">Tap to learn more →</p>}
+              <p className="text-orange-500 text-xs font-semibold mt-3">Tap to learn more →</p>
             </div>
           ))}
         </div>
 
         {/* Desktop: grid */}
-        <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
-            <div key={service.title} onClick={() => !service.disabled && setSelectedService(service)} className={`relative bg-white border rounded-2xl p-6 shadow-sm transition-all duration-300 ${service.disabled ? "opacity-60" : "hover:shadow-lg hover:-translate-y-1 cursor-pointer"}`}>
+            <div key={service.title} onClick={() => setSelectedService(service)} className="relative bg-white border rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer">
               <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4 ${service.badgeColor}`}>{service.badge}</span>
               <p className="text-5xl mb-4">{service.icon}</p>
               <h3 className="text-lg font-bold text-gray-900 font-[var(--font-playfair)]">{service.title}</h3>
               <p className="text-orange-500 text-sm font-medium mb-2">{service.subtitle}</p>
               <p className="text-gray-500 text-sm leading-relaxed line-clamp-3">{service.description}</p>
-              {!service.disabled && <p className="text-orange-500 text-sm font-semibold mt-4">Click to learn more →</p>}
+              <p className="text-orange-500 text-sm font-semibold mt-4">Click to learn more →</p>
             </div>
           ))}
         </div>

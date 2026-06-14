@@ -11,6 +11,9 @@ export default function Pricing() {
         { label: "Budget A4 – Color", price: "₹8", unit: "per page" },
         { label: "Crisp A4 – B&W", price: "₹2", unit: "per page" },
         { label: "Crisp A4 – Color", price: "₹10", unit: "per page" },
+        { label: "Bond 100GSM – B&W", price: "₹5", unit: "per page" },
+        { label: "Bond 100GSM – Color", price: "₹12", unit: "per page" },
+        { label: "Ledger Green 90GSM", price: "₹3", unit: "per page" },
       ],
     },
     {
@@ -18,13 +21,13 @@ export default function Pricing() {
       category: "Photo Printing",
       waLink: WA_LINKS.photo,
       prices: [
-        { label: "Glossy A4 – B&W", price: "₹15", unit: "per page" },
-        { label: "Glossy A4 – Color", price: "₹20", unit: "per page" },
-        { label: "Glossy A5 – B&W", price: "₹7.50", unit: "per page" },
-        { label: "Glossy A5 – Color", price: "₹10", unit: "per page" },
+        { label: "Glossy 130GSM A4 – B&W", price: "₹7.50", unit: "per page" },
+        { label: "Glossy 130GSM A4 – Color", price: "₹10", unit: "per page" },
+        { label: "Premium 180GSM A4 – B&W", price: "₹15", unit: "per page" },
+        { label: "Premium 180GSM A4 – Color", price: "₹20", unit: "per page" },
         { label: "4x6 Postcard – B&W", price: "₹7", unit: "per photo" },
         { label: "4x6 Postcard – Color", price: "₹10", unit: "per photo" },
-        { label: "Passport 8 pcs – Color", price: "₹15", unit: "per set" },
+        { label: "Passport 8 pcs + Sticker", price: "₹20", unit: "per set" },
       ],
     },
     {
@@ -41,6 +44,39 @@ export default function Pricing() {
         { label: "Budget A5 – B&W", price: "₹5", unit: "per sheet" },
         { label: "Budget A5 – Color", price: "₹7.50", unit: "per sheet" },
       ],
+    },
+    {
+      icon: "🗂️",
+      category: "Lamination",
+      waLink: WA_LINKS.lamination,
+      prices: [
+        { label: "A4 Lamination", price: "₹10", unit: "per page" },
+        { label: "ID Card Lamination", price: "₹5", unit: "per card" },
+      ],
+      note: "Lamination charges exclude printing cost.",
+    },
+    {
+      icon: "🔗",
+      category: "Spiral Binding",
+      waLink: WA_LINKS.spiral,
+      prices: [
+        { label: "1–25 Pages", price: "₹20", unit: "per book" },
+        { label: "26–50 Pages", price: "₹25", unit: "per book" },
+        { label: "51–100 Pages", price: "₹30", unit: "per book" },
+        { label: "100+ Pages", price: "₹35", unit: "per book" },
+      ],
+      note: "Printing charges are additional.",
+    },
+    {
+      icon: "📚",
+      category: "Soft Binding",
+      waLink: WA_LINKS.soft,
+      prices: [
+        { label: "1–50 Pages", price: "₹20", unit: "per book" },
+        { label: "51–100 Pages", price: "₹30", unit: "per book" },
+        { label: "100+ Pages", price: "₹40", unit: "per book" },
+      ],
+      note: "Printing charges are additional.",
     },
   ];
 
@@ -69,6 +105,9 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
+              {"note" in plan && plan.note && (
+                <p className="text-xs text-gray-400 mt-3 italic">{plan.note}</p>
+              )}
               <a href={plan.waLink} target="_blank" rel="noreferrer" className="inline-block mt-5 w-full text-center bg-orange-500 text-white py-2.5 rounded-full font-semibold text-xs hover:bg-orange-600 transition">
                 Order Now
               </a>
@@ -77,7 +116,7 @@ export default function Pricing() {
         </div>
 
         {/* Desktop: grid */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {plans.map((plan) => (
             <div key={plan.category} className="rounded-2xl p-8 bg-white shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <p className="text-3xl mb-3">{plan.icon}</p>
@@ -90,6 +129,9 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
+              {"note" in plan && plan.note && (
+                <p className="text-xs text-gray-400 mt-4 italic">{plan.note}</p>
+              )}
               <a href={plan.waLink} target="_blank" rel="noreferrer" className="inline-block mt-8 w-full text-center bg-orange-500 text-white py-3 rounded-full font-semibold text-sm hover:bg-orange-600 transition">
                 Order Now
               </a>
