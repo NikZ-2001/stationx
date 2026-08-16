@@ -7,7 +7,6 @@ export default function Header() {
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
-    // Dispatch custom event to dismiss closed overlay
     window.dispatchEvent(new CustomEvent("dismissOverlay"));
   };
 
@@ -22,29 +21,29 @@ export default function Header() {
           )}
         </button>
         <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="text-2xl font-bold text-orange-500 tracking-tight font-[var(--font-playfair)]">
-          <i className="bi bi-printer-fill text-gray-700 mr-1" /> StationX
+          <i className="bi bi-printer-fill text-gray-400 mr-1" /> StationX
         </Link>
-        <nav className="hidden md:flex gap-8 text-sm font-medium text-gray-700">
-          <Link href="/" className="hover:text-orange-500 transition"><i className="bi bi-house mr-1" />Home</Link>
-          <Link href="/services" className="hover:text-orange-500 transition"><i className="bi bi-grid mr-1" />Services</Link>
-          <Link href="/pricing" className="hover:text-orange-500 transition"><i className="bi bi-tag mr-1" />Pricing</Link>
-          <Link href="/about" className="hover:text-orange-500 transition"><i className="bi bi-info-circle mr-1" />About</Link>
-          <Link href="/contact" className="hover:text-orange-500 transition"><i className="bi bi-telephone mr-1" />Contact</Link>
-          <Link href="/delivery" className="hover:text-orange-500 transition"><i className="bi bi-truck mr-1" />Delivery</Link>
-          <Link href="/feedback" className="hover:text-orange-500 transition"><i className="bi bi-chat-heart mr-1" />Feedback</Link>
+        <nav className="hidden md:flex gap-6 text-sm font-medium text-gray-700 items-center">
+          <Link href="/" className="hover:text-orange-500 transition">Home</Link>
+          <Link href="/printing" className="hover:text-orange-500 transition font-bold text-gray-900">Printing</Link>
+          <Link href="/stationery" className="hover:text-orange-500 transition font-bold text-gray-900">Stationery</Link>
+          <Link href="/delivery" className="hover:text-orange-500 transition">Delivery</Link>
+          <Link href="/about" className="hover:text-orange-500 transition">About</Link>
+          <Link href="/contact" className="hover:text-orange-500 transition">Contact</Link>
+          <Link href="/feedback" className="hover:text-orange-500 transition">Feedback</Link>
         </nav>
         <a href="https://wa.me/919150190729?text=Hey%20StationX!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noreferrer" className="hidden md:inline-flex items-center gap-2 bg-orange-500 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 transition">
-          <i className="bi bi-whatsapp" /> Order on WhatsApp
+          <i className="bi bi-whatsapp" /> Order Now
         </a>
       </div>
       {menuOpen && (
         <div className="md:hidden bg-white border-t px-4 py-4 flex flex-col gap-4 text-sm font-medium text-gray-700">
           <Link href="/" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2"><i className="bi bi-house" />Home</Link>
-          <Link href="/services" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2"><i className="bi bi-grid" />Services</Link>
-          <Link href="/pricing" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2"><i className="bi bi-tag" />Pricing</Link>
+          <Link href="/printing" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2 font-bold text-gray-900"><i className="bi bi-printer" />Printing</Link>
+          <Link href="/stationery" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2 font-bold text-gray-900"><i className="bi bi-journal-text" />Stationery</Link>
+          <Link href="/delivery" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2"><i className="bi bi-truck" />Delivery</Link>
           <Link href="/about" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2"><i className="bi bi-info-circle" />About</Link>
           <Link href="/contact" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2"><i className="bi bi-telephone" />Contact</Link>
-          <Link href="/delivery" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2"><i className="bi bi-truck" />Delivery</Link>
           <Link href="/feedback" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 py-2 border-b border-gray-100 flex items-center gap-2"><i className="bi bi-chat-heart" />Feedback</Link>
           <a href="https://wa.me/919150190729?text=Hey%20StationX!%20I%20want%20to%20place%20an%20order." target="_blank" rel="noreferrer" className="bg-orange-500 text-white px-4 py-3 rounded-full text-center hover:bg-orange-600 transition flex items-center justify-center gap-2 mt-2">
             <i className="bi bi-whatsapp" /> Order on WhatsApp

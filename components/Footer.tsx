@@ -26,18 +26,19 @@ export default function Footer() {
         </div>
 
         {/* Quick Links */}
-        <div>
-          <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">Quick Links</h3>
-          <ul className="space-y-2 text-sm">
-            <li><Link href="/" className="hover:text-orange-500 transition">Home</Link></li>
-            <li><Link href="/services" className="hover:text-orange-500 transition">Services</Link></li>
-            <li><Link href="/pricing" className="hover:text-orange-500 transition">Pricing</Link></li>
-            <li><Link href="/about" className="hover:text-orange-500 transition">About</Link></li>
-            <li><Link href="/contact" className="hover:text-orange-500 transition">Contact</Link></li>
-            <li><Link href="/delivery" className="hover:text-orange-500 transition">Delivery Areas</Link></li>
-            <li><Link href="/feedback" className="hover:text-orange-500 transition">Feedback</Link></li>
-          </ul>
-        </div>
+<div>
+  <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">Quick Links</h3>
+  <ul className="space-y-2 text-sm">
+    <li><Link href="/" className="hover:text-orange-500 transition">Home</Link></li>
+    <li><Link href="/printing" className="hover:text-orange-500 transition">Printing</Link></li>
+    <li><Link href="/stationery" className="hover:text-orange-500 transition">Stationery</Link></li>
+    <li><Link href="/pricing" className="hover:text-orange-500 transition">Pricing</Link></li>
+    <li><Link href="/delivery" className="hover:text-orange-500 transition">Delivery Areas</Link></li>
+    <li><Link href="/about" className="hover:text-orange-500 transition">About</Link></li>
+    <li><Link href="/contact" className="hover:text-orange-500 transition">Contact</Link></li>
+    <li><Link href="/feedback" className="hover:text-orange-500 transition">Feedback</Link></li>
+  </ul>
+</div>
 
         {/* Contact */}
         <div>
