@@ -75,7 +75,7 @@ export default function CustomizePage() {
               <div key={product.slug} className="flex items-center justify-between py-3 border-b border-gray-100">
                 <div>
                   <p className="text-sm font-semibold text-gray-900">{product.name}</p>
-                  <p className="text-xs text-gray-400">{product.size} · {product.paper}</p>
+                  <p className="text-xs text-gray-400">{product.size} </p>
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-gray-400 line-through">₹{product.price}</p>
